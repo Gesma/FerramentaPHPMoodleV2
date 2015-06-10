@@ -9,7 +9,6 @@
 		private $password = "root";
 		
 		public function getConnection(){
-			return new PDO("mysql:host=". $this->host . ";dbname=" . $this->dbName,
-					 $this->user, $this->password);
+			return new PDO("pgsql:host=$this->host;dbname=$this->dbName;username=$this->user;password=$this->password");
 		}
 	} 
